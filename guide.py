@@ -1,17 +1,43 @@
 import message
 
-def scoring_similarity(new_result, exist_result):
-	# print(f"new_result: {new_result.class_id}, box: {new_result.box}")
-	return 51
+# delta_distance에 화면상의 거리를 넣어야 함
+# 1. 멀리 있으면 pixel 조금 움직여도 상대적으로 많이 움직임
+# 2. 가까이 있으면 pixel 많이 움직여도 상대적으로 조금 움직임
 
-def new_object_detect(new_result, existing_results):
-    threshold = 50
+def check_similarity(new_result, exist_result, expected):
+    size_threshold = 2
+    offset = 20
+    distance_threshold = expected.move_speed * offset
+
+    # delta_size = new_result.size() / exist_result.size()
+    delta_distance = new_result.distance_other(exist_result)
+
+    # if delta_size > size_threshold:
+    #     return 0
+    if delta_distance > distance_threshold:
+        return 0
+
+    return delta_distance
+
+def new_object_detect(new_result, existing_results, expected_dict):
+    theshold = 3
+    min_distance = 1000
+    similar = 0
     
     for existing_result in existing_results:
         if new_result.class_id != existing_result.class_id:
             continue
-        if scoring_similarity(new_result, existing_result) > threshold:
-            return True
+        score = check_similarity(new_result, existing_result, expected_dict[new_result.class_id])
+        if min_distance > score:
+            min_distance = score
+            similar = existing_result
+
+    # print(f"min: {min_distance}, existing: {similar}")
+
+    if min_distance > theshold:
+        if similar != 0:
+            existing_results.remove(similar)
+        return True
     return False
 
 def get_msg(new_result, expeted_dict):
@@ -27,7 +53,7 @@ def test_func(existing_results, new_results, expected_dict, msg_queue, msg_event
         # 비교 로직 (필요에 따라 박스나 신뢰도를 비교할 수 있음)
         updated_results.append(new_result)  # 새로운 결과로 갱신
         
-        if new_object_detect(new_result, existing_results):
+        if new_object_detect(new_result, existing_results, expected_dict):
             msg_queue.put(get_msg(new_result, expected_dict))
             msg_event.set()
             

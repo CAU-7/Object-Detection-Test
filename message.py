@@ -13,19 +13,18 @@ class Message:
     def __repr__(self):
         return f"Message(priority={self.priority}, content='{self.content}')"
     
-def handle_msg(img_queue, img_event, msg_queue, msg_event):
+def handle_msg(img_queue, img_event, msg_queue, msg_event, expected_dict):
     existing_results = []
-
-    expected_dict = parse_cfg.parse()
 
     while True:
         # 이벤트가 설정될 때까지 대기
         img_event.wait()
 
         # 이벤트 발생 시, 큐에서 데이터를 꺼내 처리
-        if not img_queue.empty():
+        while not img_queue.empty():
             new_results = img_queue.get()
             existing_results = guide.test_func(existing_results, new_results, expected_dict, msg_queue, msg_event)
+
             # for result in existing_results:
             #     print(result)
 
