@@ -1,3 +1,4 @@
+import torch
 import cv2
 import numpy as np
 
@@ -39,8 +40,13 @@ class DetectionResult:
     def __repr__(self):
         return f"DetectionResult(path={self.path}, box={self.box}, confidence={self.confidence}, class_id={self.class_id})"
 
+def load_yolov5_model():
+    # 모델 다운로드 및 로드 (사전 학습된 weights)
+    model = torch.hub.load('ultralytics/yolov5', 'yolov5s', pretrained=True)
+    return model
+
 # YOLO 모델 로드
-def load_yolo_model():
+def load_yolov3_model():
     net = cv2.dnn.readNet("yolo/yolov3.weights", "yolo/yolov3.cfg")
     layer_names = net.getLayerNames()
     output_layers = [layer_names[i - 1] for i in net.getUnconnectedOutLayers().flatten()]
@@ -48,7 +54,7 @@ def load_yolo_model():
 
 # 이미지에서 객체 탐지
 def detect_objects(event_queue, event_ready):
-    net, output_layers = load_yolo_model()
+    net, output_layers = load_yolov3_model()
     classes = []
     with open("yolo/coco.names", "r") as f:
         classes = [line.strip() for line in f.readlines()]
