@@ -6,7 +6,7 @@ class DetectionInfo:
         self.move_speed = move_speed
 
     def __repr__(self):
-        return f"DetectionInfo(class_id='{self.class_id}', expected_w={self.expected_w}, expected_h={self.expected_h})"
+        return f"DetectionInfo(class_id='{self.class_id}', expected_w={self.expected_w}, expected_h={self.expected_h}, speed={self.move_speed})"
 
 def parse_detection_file(file_path):
     detection_dict = {}
