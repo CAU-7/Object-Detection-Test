@@ -40,7 +40,8 @@ def main():
     # img_thread.join()
     # msg_thread.join()
 
-    object_detection.detect_objects_from_video_test("asset/example.mp4", expected_dict)
+    object_detection.detect_objects_from_video_test("asset/test6.mp4", expected_dict)
+    # object_detection.detect_objects_from_video_tflite("asset/example.mp4", expected_dict)
 
 if __name__ == "__main__":
     main()

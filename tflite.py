@@ -69,13 +69,15 @@ def detect_objects_from_video_tflite(video_path, model_path, label_path):
 
             # Filter detections based on confidence threshold
             if confidence * class_prob > 0.5:  # Confidence threshold
-                ymin, xmin, ymax, xmax = box
+                ymin, xmin, w, h = box
+
+                print(f"box:{box}")
 
                 # Convert box coordinates to original frame size
-                x = int(xmin * width)
-                y = int(ymin * height)
-                w = int((xmax - xmin) * width)
-                h = int((ymax - ymin) * height)
+                x = int((xmin - (w / 2)) * width)
+                y = int((ymin - (h / 2)) * height)
+                w = int(w * width)
+                h = int(h * height)
 
                 # Add detection to results
                 detection_results.append(DetectionResult([x, y, w, h], confidence * class_prob, class_id))
@@ -97,7 +99,7 @@ def detect_objects_from_video_tflite(video_path, model_path, label_path):
 
 
 # Usage example
-model_path = "model/yolov5.tflite"  # Path to your TFLite model
+model_path = "model/best-fp16.tflite"  # Path to your TFLite model
 label_path = "model/coco.names"     # Path to your label file
 video_path = "asset/example.mp4" # Path to your video file
 

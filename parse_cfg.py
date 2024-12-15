@@ -21,9 +21,9 @@ def parse_detection_file(file_path):
                 expected_h = int(parts[2])
                 move_speed = int(parts[3])
                 
-                print(class_id)
-                print(expected_w)
-                print(expected_h)
+                # print(class_id)
+                # print(expected_w)
+                # print(expected_h)
 
                 # DetectionInfo 객체를 id를 키로 딕셔너리에 추가
                 detection_dict[class_id] = DetectionInfo(class_id, expected_w, expected_h, move_speed)
@@ -38,8 +38,8 @@ def parse():
 	detection_info_dict = parse_detection_file(file_path)
 
 	# 딕셔너리 전체 출력
-	print("\nAll detection data:")
-	for obj_id, info in detection_info_dict.items():
-		print(f"{obj_id}: {info}")
+	# print("\nAll detection data:")
+	# for obj_id, info in detection_info_dict.items():
+	# 	print(f"{obj_id}: {info}")
           
 	return detection_info_dict

@@ -1,0 +1,32 @@
+{'type': 'guide', 'data': {'time': 0, 'priorty': 8, 'message': '개포로 을 따라 123m 이동'}}
+{'type': 'warning', 'data': {'time': 4404, 'class_name': 'tree_trunk', 'angle': 4.599753694581281, 'dis': 196.07843137254903, 'priorty': 7, 'message': '2.0m 앞 우측 5도 방향에 나무 있습니다'}}
+{'type': 'warning', 'data': {'time': 4654, 'class_name': 'pole', 'angle': 1.8842364532019704, 'dis': 161.29032258064515, 'priorty': 7, 'message': '1.6m 앞 우측 2도 방향에 기둥 있습니다'}}
+{'type': 'block', 'data': {'time': 4921, 'priorty': 9, 'message': '전방에 점자 블럭이 있습니다'}}
+{'type': 'guide', 'data': {'time': 5082, 'priorty': 8, 'message': '우측 횡단보도 후 보행자도로 을 따라 20m 이동'}}
+{'type': 'warning', 'data': {'time': 5745, 'class_name': 'car', 'angle': 9.919950738916256, 'dis': 373.8317757009346, 'priorty': 2, 'message': '3.7m 앞 우측 10도 방향에 차 있습니다'}}
+{'type': 'warning', 'data': {'time': 5754, 'class_name': 'car', 'angle': -8.97783251231527, 'dis': 344.82758620689657, 'priorty': 2, 'message': '3.4m 앞 좌측 9도 방향에 차 있습니다'}}
+{'type': 'warning', 'data': {'time': 5842, 'class_name': 'car', 'angle': -3.768472906403941, 'dis': 243.90243902439025, 'priorty': 1, 'message': '2.4m 앞 좌측 4도 방향에 차 있습니다'}}
+{'type': 'warning', 'data': {'time': 6258, 'class_name': 'bollard', 'angle': -0.3879310344827586, 'dis': 189.47368421052633, 'priorty': 7, 'message': '1.9m 앞 좌측 0도 방향에 볼라드 있습니다'}}
+{'type': 'guide', 'data': {'time': 6437, 'priorty': 8, 'message': '좌회전 후 개포로 을 따라 116m 이동'}}
+{'type': 'warning', 'data': {'time': 6762, 'class_name': 'pole', 'angle': 4.156403940886699, 'dis': 196.07843137254903, 'priorty': 7, 'message': '2.0m 앞 우측 4도 방향에 기둥 있습니다'}}
+{'type': 'warning', 'data': {'time': 6765, 'class_name': 'bollard', 'angle': -4.710591133004926, 'dis': 103.44827586206897, 'priorty': 7, 'message': '1.0m 앞 좌측 5도 방향에 볼라드 있습니다'}}
+{'type': 'warning', 'data': {'time': 7017, 'class_name': 'pole', 'angle': 4.766009852216749, 'dis': 111.11111111111111, 'priorty': 7, 'message': '1.1m 앞 우측 5도 방향에 기둥 있습니다'}}
+{'type': 'warning', 'data': {'time': 8658, 'class_name': 'tree_trunk', 'angle': -4.766009852216749, 'dis': 161.29032258064515, 'priorty': 7, 'message': '1.6m 앞 좌측 5도 방향에 나무 있습니다'}}
+{'type': 'warning', 'data': {'time': 9766, 'class_name': 'pole', 'angle': 1.2192118226600985, 'dis': 185.1851851851852, 'priorty': 7, 'message': '1.9m 앞 우측 1도 방향에 기둥 있습니다'}}
+{'type': 'warning', 'data': {'time': 11470, 'class_name': 'tree_trunk', 'angle': 2.105911330049261, 'dis': 113.63636363636364, 'priorty': 7, 'message': '1.1m 앞 우측 2도 방향에 나무 있습니다'}}
+{'type': 'warning', 'data': {'time': 11992, 'class_name': 'tree_trunk', 'angle': 4.987684729064039, 'dis': 192.30769230769232, 'priorty': 7, 'message': '1.9m 앞 우측 5도 방향에 나무 있습니다'}}
+{'type': 'warning', 'data': {'time': 12129, 'class_name': 'tree_trunk', 'angle': 4.821428571428571, 'dis': 158.73015873015873, 'priorty': 7, 'message': '1.6m 앞 우측 5도 방향에 나무 있습니다'}}
+{'type': 'warning', 'data': {'time': 12220, 'class_name': 'tree_trunk', 'angle': -4.932266009852217, 'dis': 175.43859649122808, 'priorty': 7, 'message': '1.8m 앞 좌측 5도 방향에 나무 있습니다'}}
+{'type': 'warning', 'data': {'time': 12346, 'class_name': 'traffic_sign', 'angle': -4.876847290640394, 'dis': 197.18309859154928, 'priorty': 7, 'message': '2.0m 앞 좌측 5도 방향에 표지판 있습니다'}}
+{'type': 'warning', 'data': {'time': 12402, 'class_name': 'tree_trunk', 'angle': -1.7733990147783252, 'dis': 138.88888888888889, 'priorty': 7, 'message': '1.4m 앞 좌측 2도 방향에 나무 있습니다'}}
+{'type': 'warning', 'data': {'time': 12519, 'class_name': 'pole', 'angle': -0.49876847290640397, 'dis': 123.45679012345678, 'priorty': 7, 'message': '1.2m 앞 좌측 0도 방향에 기둥 있습니다'}}
+{'type': 'warning', 'data': {'time': 12762, 'class_name': 'tree_trunk', 'angle': -4.876847290640394, 'dis': 178.57142857142858, 'priorty': 7, 'message': '1.8m 앞 좌측 5도 방향에 나무 있습니다'}}
+{'type': 'warning', 'data': {'time': 13009, 'class_name': 'tree_trunk', 'angle': -4.655172413793103, 'dis': 54.34782608695652, 'priorty': 6, 'message': '0.5m 앞 좌측 5도 방향에 나무 있습니다'}}
+{'type': 'guide', 'data': {'time': 13153, 'priorty': 8, 'message': '우회전 후 33m 이동'}}
+{'type': 'warning', 'data': {'time': 15081, 'class_name': 'person', 'angle': 11.25, 'dis': 188.67924528301887, 'priorty': 5, 'message': '1.9m 앞 우측 11도 방향에 person 있습니다'}}
+{'type': 'guide', 'data': {'time': 15632, 'priorty': 8, 'message': '좌회전 후 29m 이동'}}
+{'type': 'guide', 'data': {'time': 18012, 'priorty': 8, 'message': '우회전 후 보행자도로 을 따라 69m 이동'}}
+{'type': 'warning', 'data': {'time': 18187, 'class_name': 'car', 'angle': 5.043103448275862, 'dis': 389.61038961038963, 'priorty': 2, 'message': '3.9m 앞 우측 5도 방향에 차 있습니다'}}
+{'type': 'warning', 'data': {'time': 18195, 'class_name': 'car', 'angle': -6.428571428571429, 'dis': 381.35593220338984, 'priorty': 2, 'message': '3.8m 앞 좌측 6도 방향에 차 있습니다'}}
+{'type': 'warning', 'data': {'time': 18264, 'class_name': 'movable_signage', 'angle': -12.801724137931036, 'dis': 191.78082191780823, 'priorty': 5, 'message': '1.9m 앞 좌측 13도 방향에 안내판 있습니다'}}
+{'type': 'warning', 'data': {'time': 18268, 'class_name': 'bollard', 'angle': -2.937192118226601, 'dis': 153.84615384615384, 'priorty': 7, 'message': '1.5m 앞 좌측 3도 방향에 볼라드 있습니다'}}
