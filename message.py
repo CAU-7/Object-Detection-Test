@@ -34,11 +34,11 @@ def handle_msg(img_queue, img_event, msg_queue, msg_event, expected_dict):
         img_event.clear()
 
 
-def test_msg(new_results, expected_dict, existing_results, time):
+def test_msg(new_results, expected_dict, existing_results):
     # 이벤트가 설정될 때까지 대기
 
     # 이벤트 발생 시, 큐에서 데이터를 꺼내 처리
-    existing_results = guide.test_func(existing_results, new_results, expected_dict, time)
+    existing_results = guide.test_func(existing_results, new_results, expected_dict)
 
         # for result in existing_results:
         #     print(result)
